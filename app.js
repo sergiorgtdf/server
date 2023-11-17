@@ -1,13 +1,16 @@
 // IMPORTS
 import express from "express";
 
+// import "./src/database/db.js";
+import { settingDotEnv } from "./src/config.js";
 // Creo el servidor
 const app = express();
 
 // MIDDLEWARES
 app.use(express.json());
 
-const port = 0;
+const { port } = settingDotEnv();
 
+console.log(port);
 // Se pone a la escucha el servidor
-app.listen(4000, () => console.log(`Servidor corriendo en el puerto ${port}`));
+app.listen(port, () => console.log(`Servidor corriendo en el puerto ${port}`));
