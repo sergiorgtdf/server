@@ -11,6 +11,5 @@ app.use(express.json());
 
 const { port } = settingDotEnv();
 
-console.log(port);
 // Se pone a la escucha el servidor
 app.listen(port, () => console.log(`Servidor corriendo en el puerto ${port}`));
